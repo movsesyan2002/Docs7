@@ -7,46 +7,46 @@
 // Cannot be negative.
 // If set to a negative value, defaults to 10.
 
-// class Product {
-//     private decimal _price;
-//     private int _stock;
+class Product {
+    private decimal _price;
+    private int _stock;
 
-//     public decimal Price {
-//         get { return _price; }
+    public decimal Price {
+        get { return _price; }
 
-//         set {
+        set {
 
-//             if (value < 0) {
-//                 throw new ArgumentException("Price cannot be negative");
-//             }
+            if (value < 0) {
+                throw new ArgumentException("Price cannot be negative");
+            }
 
-//             else {
-//                 _price = value;
-//             }
+            else {
+                _price = value;
+            }
 
-//         }
-//     }
+        }
+    }
 
-//     public int Stock {
-//         get { return _stock; }
-//         set {
-//             if (value < 0) {
-//                 _stock = 10;                
-//             }
-//             else
-//             {
-//                 _stock = value;
-//             }
-//         }
-//     }
-// }
+    public int Stock {
+        get { return _stock; }
+        set {
+            if (value < 0) {
+                _stock = 10;                
+            }
+            else
+            {
+                _stock = value;
+            }
+        }
+    }
+}
 
-// class Program {
-//     public static void Main(string[] args) {
-//         Product product = new Product();
-//         product.Price = 6.000m;
-//         product.Stock = 15;
-//         Console.WriteLine($"Product price is {product.Price} and Stock is {product.Stock}");
-//         product.Price = -1;
-//     }
-// }
+class Program {
+    public static void Main(string[] args) {
+        Product product = new Product();
+        product.Price = 6.000m;
+        product.Stock = 15;
+        Console.WriteLine($"Product price is {product.Price} and Stock is {product.Stock}");
+        product.Price = -1;
+    }
+}
