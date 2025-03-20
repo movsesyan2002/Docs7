@@ -7,56 +7,56 @@
 // Use only arrays.
 
 
-// using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.X509Certificates;
 
-// class Student {
-//     private string[] subjects;
-//     private int[] grade;
+class Student {
+    private string[] subjects;
+    private int[] grade;
 
-//     private static int _count = 0;
+    private static int _count = 0;
 
-//     public Student(int capacity){
-//         subjects = new string[capacity];
-//         grade = new int[capacity];
-//     }
+    public Student(int capacity){
+        subjects = new string[capacity];
+        grade = new int[capacity];
+    }
 
-//     public int this[string name] {
+    public int this[string name] {
         
-//         get{
-//             for (int i = 0; i < _count; i++)
-//             {
-//                 if (subjects[i] == name)
-//                 {
-//                     return grade[i];
-//                 }
-//             }
-//             return -1;
-//         }
+        get{
+            for (int i = 0; i < _count; i++)
+            {
+                if (subjects[i] == name)
+                {
+                    return grade[i];
+                }
+            }
+            return -1;
+        }
 
-//         set {
+        set {
 
-//             for (int i = 0; i < _count; ++i) {
-//                 if (subjects[i] == name) {
-//                     grade[i] = value;
-//                     return;
-//                 }
-//             }
+            for (int i = 0; i < _count; ++i) {
+                if (subjects[i] == name) {
+                    grade[i] = value;
+                    return;
+                }
+            }
 
-//             if (_count < subjects.Length ) {
-//                 subjects[_count] = name;
-//                 grade[_count] = value;
-//                 _count++;
-//             }
-//         }    
-//     }
-// }
+            if (_count < subjects.Length ) {
+                subjects[_count] = name;
+                grade[_count] = value;
+                _count++;
+            }
+        }    
+    }
+}
 
-// class Program {
-//     static void Main() {
-//         Student student = new Student(3);
-//         student["Math"] = 10;
-//         student["Geographic"] = 9;
+class Program {
+    static void Main() {
+        Student student = new Student(3);
+        student["Math"] = 10;
+        student["Geographic"] = 9;
 
-//         Console.WriteLine($"The student Math grades is {student["Math"]}");
-//     }
-// }
+        Console.WriteLine($"The student Math grades is {student["Math"]}");
+    }
+}
